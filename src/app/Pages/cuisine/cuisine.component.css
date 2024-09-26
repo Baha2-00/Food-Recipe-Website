@@ -1,0 +1,108 @@
+/* General Styling for the Articles Section */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling for Each Article */
+.article-wrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.article-wrapper:hover {
+  transform: translateY(-8px); /* Lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepened shadow on hover */
+}
+
+/* Image Styling */
+.article-wrapper figure {
+  margin: 0;
+  height: 200px; /* Fixed height */
+  overflow: hidden;
+}
+
+.article-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container properly */
+  transition: transform 0.5s ease;
+}
+
+.article-wrapper:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Article Body Styling */
+.article-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.article-body h2 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.article-wrapper:hover h2 {
+  color: #4CAF50; /* Green color on hover */
+}
+
+.article-body p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Read More Button Styling */
+.read-more {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #388E3C; /* Darker green on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+.read-more svg {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+  .article-body h2 {
+    font-size: 1.4em;
+  }
+  
+  .article-body p {
+    font-size: 0.9em;
+  }
+  
+  .read-more {
+    padding: 8px 20px;
+  }
+}

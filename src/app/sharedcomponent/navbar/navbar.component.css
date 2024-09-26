@@ -1,0 +1,83 @@
+/* Navbar image scaling */
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 80px;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .navbar-toggler {
+        margin-right: 15px;
+    }
+    
+    .dropdown-menu {
+        width: 100%;
+    }
+}
+
+
+/* Dropdown Link */
+.custom-dropdown-toggle {
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-dropdown-toggle:hover {
+    background-color: #45a049;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Menu */
+.custom-dropdown-menu {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Menu Item */
+.custom-dropdown-item {
+    font-size: 14px;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.custom-dropdown-item:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Add subtle animation on dropdown */
+.custom-dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.custom-dropdown-menu {
+    opacity: 0;
+    transform: translateY(10px);
+}
+

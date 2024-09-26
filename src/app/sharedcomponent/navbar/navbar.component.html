@@ -1,0 +1,63 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2" href="">
+            <img src="../../../assets/Img/YumYumLogo.png" alt="Logo" style="height: 50px; width: 90px;" />
+        </a>
+
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="''">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/Dish'">Dish</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/Aboutus'">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/ContactUs'">Contact Us</a>
+                </li>
+                <li class="nav-item" *ngIf="IsloggedIn">
+                    <a class="nav-link" [routerLink]="'/User-Profile'">User Profile</a>
+                </li>
+
+                <!-- Recipe Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                      Recipe
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" [routerLink]="'/Category'">Category</a></li>
+                      <li><a class="dropdown-item" [routerLink]="'/Cuisine'">Cuisine</a></li>
+                      <li><a class="dropdown-item" [routerLink]="'/Dish'">Dish</a></li>
+                    </ul>
+                  </li>
+                     
+            </ul>
+
+            <!-- Right side (Buttons) -->
+            <div class="d-flex">
+                <!-- Login/Signup buttons -->
+                <button class="btn btn-primary me-2" [routerLink]="'/signin'" *ngIf="!IsloggedIn">Login</button>
+                <button class="btn btn-primary me-2" [routerLink]="'/signup'" *ngIf="!IsloggedIn">Signup</button>
+
+                <!-- User Dashboard and Logout buttons -->
+                <button class="btn btn-success me-2" (click)="NaivageteToClientDashboard()" *ngIf="IsloggedIn">My Dashboard</button>
+                <button class="btn btn-primary" (click)="Logout()" *ngIf="IsloggedIn">Logout</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navbar -->

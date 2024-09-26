@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+
+<br>
+
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <h1 class="my-4">{{dto.name}}</h1>
+  
+    <!-- Portfolio Item Row -->
+    <div class="row">
+  
+      <div class="col-md-8">
+        <img class="img-fluid" [src]="dto.image" alt="">
+      </div>
+  
+      <div class="col-md-4">
+        <h2 class="my-3">Description</h2>
+        <p style="font-size: 20px; font-weight: 700;"> <b>{{dto.description}}</b></p>
+        <h2 class="my-3">Project Details</h2>
+        <ul>
+          <li>{{dto.categoryName}}</li>
+          <li>{{dto.cuisineName}}</li>
+          <li>{{dto.creationDate |date:'dd/MM/yyyy'}}</li>
+          <li>{{dto.userName}}</li>
+        </ul>
+        <h2 class="my-3">Ingredients And Preparing Steps</h2>
+        <ul>
+          <p style="font-size: 20px; font-weight: 700;"> <b>Ingredients: </b></p>
+          <li>{{dto.ingredientName}}</li>
+          <br>
+          <p style="font-size: 20px; font-weight: 700;"> <b>Quantity: </b></p>
+          <li>{{dto.quantity}}</li>
+          <br>
+          <p style="font-size: 20px; font-weight: 700;"> <b>Preparing Steps :  </b></p>
+          <li>{{dto.preparingStepsDescription}}</li>
+          <br>
+        </ul>
+      </div>
+    </div>
+    <!-- /.row -->
+  
+    <!-- Related Projects Row -->
+    
+    <!-- /.row -->
+  
+  </div>
+  <br><br><br>
+  <!-- /.container -->
